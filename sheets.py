@@ -59,12 +59,9 @@ def updateSheet(spreadsheet_id, range_name, value_range_body):
     return None
 
 if __name__ == '__main__':
+    print('running sheets.py')
     # print(getSheet('1BNJKDTg_-c84h5BpSOkJTQOL4axuxCPB-rLaCbHAcfg', 'db!A2:J18'))
-    print(updateSheet(
-        '1BNJKDTg_-c84h5BpSOkJTQOL4axuxCPB-rLaCbHAcfg',
-        'store',
-        {
-            'range': 'store',
-            'values': [[1, 2, 3], ['foo', 'bar', 'car']],
-        }
-        ))
+    # print(updateSheet(
+    #     '1BNJKDTg_-c84h5BpSOkJTQOL4axuxCPB-rLaCbHAcfg',
+    #     'store', { 'range': 'store', 'values': [[1, 2, 3], ['foo', 'bar', 'car']], }
+    #     ))

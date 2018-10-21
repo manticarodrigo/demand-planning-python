@@ -1,4 +1,4 @@
-from sheets import getSheet
+from sheets import getSheet, updateSheet
 
 def main():
     values = getSheet('1BNJKDTg_-c84h5BpSOkJTQOL4axuxCPB-rLaCbHAcfg', 'db!A2:J500000')
@@ -19,6 +19,17 @@ def main():
         sku_dict[sku][week][store] = (accumulator + unit_sale) / 2
         
     print(sku_dict)
+
+def update_store_sheet():
+    # TODO: get last five weeks avg
+    updateSheet(
+        '1BNJKDTg_-c84h5BpSOkJTQOL4axuxCPB-rLaCbHAcfg',
+        'store',
+        {
+            'range': 'store',
+            'values': [[1, 2, 3], ['foo', 'bar', 'car']],
+        }
+    )
 
 if __name__ == '__main__':
     main()
